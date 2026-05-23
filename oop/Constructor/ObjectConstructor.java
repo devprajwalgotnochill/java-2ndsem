@@ -1,5 +1,3 @@
-package oop;
-
 class Example{
     String name;
     int id;
