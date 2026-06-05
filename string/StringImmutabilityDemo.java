@@ -19,7 +19,7 @@ public record StringImmutabilityDemo() {
         str = str.concat("Gharti");
 
         System.out.println("\nAfter concat() without assignment: ");
-        System.out.println("String "+ str);
+        System.out.println("String "+ str);e
         System.out.println("Memory adress :" +System.identityHashCode(str));
     }
     
