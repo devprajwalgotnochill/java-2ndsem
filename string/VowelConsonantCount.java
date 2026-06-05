@@ -1,6 +1,7 @@
 public class VowelConsonantCount {
     public static void main(String[] args) {
-        String str = "Hello world";
+
+        String str = "Prajwal Gharti";
 
         int vowels = 0;
         int consonants = 0;
@@ -24,4 +25,5 @@ public class VowelConsonantCount {
         System.out.println("Vowels: "+ vowels);
         System.out.println("Consonants: "+ consonants);
     }
+
 }
