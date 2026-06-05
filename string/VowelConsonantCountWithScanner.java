@@ -3,7 +3,7 @@ import java.util.Scanner;
 public class VowelConsonantCountWithScanner {
     public static void main(String[] args) {
 
-        Scanner sc = new Scanner(System.in)
+        Scanner sc = new Scanner(System.in);
         System.out.println("Enter a sentence");
         String str = sc.nextLine();
 
@@ -28,6 +28,6 @@ public class VowelConsonantCountWithScanner {
         System.out.println("String: "+str);
         System.out.println("Vowels: "+ vowels);
         System.out.println("Consonants: "+ consonants);
+        sc.close();
     }
-
 }
