@@ -136,6 +136,151 @@ public class Super extends Base {
 
 ---
 
+# Constructor.java
+
+Introduces the concept of a Java constructor. A constructor shares the class name, has no return type, and is called automatically when an object is created. Used here to initialize `name` and `id` via `this`.
+
+```java
+package constructor;
+
+class Example {
+    String name;
+    int id;
+
+    Example(String name, int id) {
+        this.id = id;
+        this.name = name;
+    }
+
+    void display() {
+        System.out.println("Name " + name + " ID: " + id);
+    }
+}
+
+public class Constructor {
+    public static void main(String[] args) {
+        Example ex = new Example("Prajwal", 12);
+        ex.display();
+    }
+}
+```
+
+---
+
+# DefaultConstructor.java
+
+Shows a no-argument (default) constructor. If no constructor is defined Java provides one automatically; here one is defined explicitly to print a message when an object is instantiated.
+
+```java
+class Geeks {
+
+    Geeks() {
+        System.out.println("Default constructor");
+    }
+
+    public static void main(String[] args) {
+        Geeks hello = new Geeks();
+    }
+}
+```
+
+---
+
+# ParameterizedConstructor.java
+
+Demonstrates a parameterized constructor that accepts arguments at the time of object creation to set field values directly, without needing separate setter methods.
+
+```java
+package constructor;
+
+public class ParameterizedConstructor {
+    public static void main(String[] args) {
+        StudentID s1 = new StudentID("Prajwal", 12);
+    }
+}
+
+class StudentID {
+    StudentID(String name, int id) {
+        System.out.println("Name: " + name);
+        System.out.println("ID: " + id);
+    }
+}
+```
+
+---
+
+# ConstroctorOverloading.java
+
+Demonstrates constructor overloading where a class defines multiple constructors with different parameter lists. Java selects the correct one based on the arguments passed at object creation.
+
+```java
+package constructor;
+
+class Student {
+    String name;
+    int id;
+
+    Student(String name) {
+        System.out.println("Name: " + name);
+    }
+
+    Student(String name, int id) {
+        System.out.println("Name: " + name);
+        System.out.println("ID: " + id);
+    }
+
+    Student(int id) {
+        System.out.println("Id: " + id);
+    }
+}
+
+public class ConstroctorOverloading {
+    public static void main(String[] args) {
+        Student s1 = new Student("Prajwal");
+        Student s2 = new Student("Prajwal", 123);
+        Student s3 = new Student(123);
+    }
+}
+```
+
+---
+
+# ConstructorChanging.java
+
+Shows chained constructor calls using `this()`. The default constructor calls the `int` constructor, which in turn calls the `String, int` constructor, demonstrating a chain of delegation before each constructor finishes its own output.
+
+```java
+package constructor;
+
+public class ConstructorChanging {
+    public static void main(String[] args) {
+        new Student();
+    }
+}
+
+class Student {
+    String name;
+    int id;
+
+    Student() {
+        this(123);
+        System.out.println("Default");
+    }
+
+    Student(String name, int id) {
+        System.out.println("Name: " + name);
+        System.out.println("ID: " + id);
+    }
+
+    Student(int id) {
+        this("Prajwal", 123);
+        System.out.println("Id");
+    }
+}
+```
+
+---
+
 # TestStudent.java
 
 A minimal test class that creates a `Student` object and prints its default field values, verifying Java's default initialization behavior for `int` and `String`.
