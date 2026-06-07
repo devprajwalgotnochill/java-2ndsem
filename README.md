@@ -357,10 +357,21 @@ In Java, a ⁠String is an object that represents a sequence of characters. Unli
 StringBuffer is thread-safe
 
 ```java
-StringBuffer sb = new StringBuffer();
-sb.append("Java");
-sb.append("Programming");
-System.out.println("Result: " + sb.toString());
+public class StringBufferAppendDemo {
+    
+    public static void main(String[] args) {
+        StringBuffer sb = new StringBuffer();
+
+        sb.append("Java");
+        sb.append("Programming");
+        sb.append("Language");
+        sb.append("Tutorial");
+
+        System.out.println("Result: "+ sb.toString());
+
+    }
+}
+
 ```
 
 ---
@@ -369,10 +380,20 @@ System.out.println("Result: " + sb.toString());
 StringBuilder faster, non-thread-safe 
 
 ```java
-StringBuilder sb = new StringBuilder();
-sb.append("Java");
-sb.append("Programming");
-System.out.println("Result: " + sb.toString());
+public class StringBuildingAppedDemo {
+
+    public static void main(String[] args) {
+        StringBuilder sb = new StringBuilder();
+    
+        sb.append("Java");
+        sb.append("Programming");
+        sb.append("Language");
+        sb.append("Tutorial");
+
+        System.out.println("Result: "+ sb.toString());
+    }
+}
+
 ```
 
 ---
@@ -381,10 +402,33 @@ System.out.println("Result: " + sb.toString());
 Demonstrates that `String` objects are immutable in Java — `concat()` does not modify the original string unless the result is reassigned.
 
 ```java
-String str = "Prajwal";
-str.concat("Gharti");           // no effect, result discarded
-str = str.concat("Gharti");     // works: new object assigned back to str
-System.out.println(str);
+public record StringImmutabilityDemo() {
+    public static void main(String[] args) {
+        
+        String str = "Prajwal"; //store in SCP
+
+
+        System.out.println("Org String :" +str);
+        System.out.println("Memory address before :"+ System.identityHashCode(str));
+
+        //attemt to modify
+        str.concat("Gharti");
+       
+   
+        System.out.println("\nAfter concat() without assignment: ");
+        System.out.println("String "+ str);
+        System.out.println("Memory adress :" +System.identityHashCode(str));
+
+        //Assigment the resut to str
+        str = str.concat("Gharti");
+
+        System.out.println("\nAfter concat() without assignment: ");
+        System.out.println("String "+ str);
+        System.out.println("Memory adress :" +System.identityHashCode(str));
+    }
+    
+}
+
 ```
 
 ---
@@ -393,24 +437,76 @@ System.out.println(str);
 Counts the number of vowels and consonants in a hardcoded string by iterating over each character.
 
 ```java
-String str = "Prajwal Gharti";
-for (int i = 0; i < str.length(); i++) {
-    char ch = str.charAt(i);
-    if (ch == 'a' || ch == 'e' || ch == 'i' || ch == 'o' || ch == 'u') vowels++;
-    else consonants++;
+public class VowelConsonantCount {
+    public static void main(String[] args) {
+
+        String str = "Prajwal Gharti";
+
+        int vowels = 0;
+        int consonants = 0;
+        str = str.toLowerCase();
+
+        for (int i = 0; i < str.length(); i++) {
+            char ch = str.charAt(i);
+
+            //check if char is a letter 
+            if ((ch >= 'a' && ch <= 'z')) {
+
+                if (ch == 'a' || ch == 'e' || ch == 'i' || ch == 'o' || ch == 'u') {
+                    vowels++;
+                } else {
+                    consonants++;
+                }
+                
+            }
+        }
+        System.out.println("String: "+str);
+        System.out.println("Vowels: "+ vowels);
+        System.out.println("Consonants: "+ consonants);
+    }
+
 }
 ```
 
 ---
 
 # VowelConsonantCountWithScanner.java
-Same vowel/consonant counting logic as above, but accepts user input at runtime via `Scanner`.
+
 
 ```java
-Scanner sc = new Scanner(System.in);
-String str = sc.nextLine();
-// ... same counting logic ...
-sc.close();
+import java.util.Scanner;
+
+public class VowelConsonantCountWithScanner {
+    public static void main(String[] args) {
+
+        Scanner sc = new Scanner(System.in);
+        System.out.println("Enter a sentence");
+        String str = sc.nextLine();
+
+        int vowels = 0;
+        int consonants = 0;
+        str = str.toLowerCase();
+
+        for (int i = 0; i < str.length(); i++) {
+            char ch = str.charAt(i);
+
+            //check if char is a letter 
+            if ((ch >= 'a' && ch <= 'z')) {
+
+                if (ch == 'a' || ch == 'e' || ch == 'i' || ch == 'o' || ch == 'u') {
+                    vowels++;
+                } else {
+                    consonants++;
+                }
+                
+            }
+        }
+        System.out.println("String: "+str);
+        System.out.println("Vowels: "+ vowels);
+        System.out.println("Consonants: "+ consonants);
+        sc.close();
+    }
+}
 ```
 
 # Student.java
