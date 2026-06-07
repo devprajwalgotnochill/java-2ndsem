@@ -151,6 +151,206 @@ class Student {
 ---
 
 
+
+
+# Abstraction 
+Abstraction in Java is the process of hiding internal implementation details and showing only essential functionality to the user. It focuses on what an object does rather than how it does it.
+
+It hides the complex details and shows only essential features.
+Abstract classes may have methods without implementation and must be implemented by subclasses.
+
+```java
+package abstraction;
+// Abstract class
+abstract class Animal {
+
+    // Abstract method (no body)
+    abstract void makeSound();
+
+    // Normal method
+    void sleep() {
+        System.out.println("Animal is sleeping");
+    }
+}
+
+// Concrete class
+class Dog extends Animal {
+
+    @Override
+    void makeSound() {
+        System.out.println("Dog says Woof!");
+    }
+}
+
+class Cat extends Animal {
+    void makeSound() {
+        System.out.println("Meow!");
+    }
+}
+
+public class Abstraction {
+    public static void main(String[] args) {
+
+        Animal a = new Dog(); // Upcasting
+
+        a.makeSound(); // Calls Dog's implementation
+        a.sleep();     // Calls Animal's method
+    }
+}
+```
+
+# Encapsulation
+Encapsulation in Java is an object-oriented principle that binds data and methods into a single unit, typically a class. It restricts direct access to data by hiding implementation details. This ensures controlled interaction with the data through defined methods.
+Achieved using access modifiers like private, protected, and public.
+```java
+package Encapsulation;
+class BankAccount {
+    private String accountHolder;
+    private double amount;
+
+    public void setAccountHolder(String name) {
+        this.accountHolder = name;
+    }
+
+    public void setAmount(double amount) {
+        this.amount = amount;
+    }
+
+    public String getAccountHolder() {
+        return accountHolder;
+    }
+
+    public double getAmount() {
+        return amount;
+    }
+}
+
+public class EncapsulationExample {
+    public static void main(String[] args) {
+        BankAccount ba = new BankAccount();
+
+        ba.setAccountHolder("Santosh");
+        ba.setAmount(123);
+
+        System.out.println("Account Holder Name: " +ba.getAccountHolder());
+
+        System.out.println("Balance: " + ba.getAmount());
+    }
+}
+```
+
+# Inheritance
+Inheritance in Java is a core OOP concept that allows a class to acquire properties and behaviors from another class.
+
+# 1.Single Inheritance
+```java
+//Super class
+class Vehicle {
+    Vehicle() {
+        System.out.println("This is a Vehicle");
+    }
+}
+
+// Subclass 
+class Car extends Vehicle {
+    Car() {
+        System.out.println("This Vehicle is Car");
+    }
+}
+
+public class SingleInheritance {
+    public static void main(String[] args) {
+        // Creating object of subclass invokes base class constructor
+        Car obj = new Car();
+    }
+}
+```
+
+# 2.Multilevel Inheritance
+```java
+class Vehicle {
+    Vehicle() {
+        System.out.println("This is a Vehicle");
+    }
+}
+class FourWheeler extends Vehicle {
+    FourWheeler() {
+        System.out.println("4 Wheeler Vehicles");
+    }
+}
+class Car extends FourWheeler {
+    Car() {
+        System.out.println("This 4 Wheeler Vehicle is a Car");
+    }
+}
+public class Geeks {
+    public static void main(String[] args) {
+        Car obj = new Car(); // Triggers all constructors in order
+    }
+}
+```
+
+
+
+# 3.Multiple Inheritance
+In Multiple inheritances, one class can have more than one superclass and inherit features from all parent classes.
+Note: that Java does not support multiple inheritances with classes. In Java, we can achieve multiple inheritances only through Interfaces. 
+```java
+interface LandVehicle {
+    default void landInfo() {
+        System.out.println("This is a LandVehicle");
+    }
+}
+interface WaterVehicle {
+    default void waterInfo() {
+        System.out.println("This is a WaterVehicle");
+    }
+}
+// Subclass implementing both interfaces
+class AmphibiousVehicle implements LandVehicle, WaterVehicle {
+    AmphibiousVehicle() {
+        System.out.println("This is an AmphibiousVehicle");
+    }
+}
+public class Test {
+    public static void main(String[] args) {
+        AmphibiousVehicle obj = new AmphibiousVehicle();
+        obj.waterInfo();
+        obj.landInfo();
+    }
+}
+```
+
+# 4.Hierarchical Inheritance
+hierarchical inheritance, more than one subclass is inherited from a single base class.
+```java
+class Vehicle {
+    Vehicle() {
+        System.out.println("This is a Vehicle");
+    }
+}
+
+class Car extends Vehicle {
+    Car() {
+        System.out.println("This Vehicle is Car");
+    }
+}
+
+class Bus extends Vehicle {
+    Bus() {
+        System.out.println("This Vehicle is Bus");
+    }
+}
+
+public class Test {
+    public static void main(String[] args) {
+        Car obj1 = new Car(); 
+        Bus obj2 = new Bus(); 
+    }
+}
+```
+
+
 # Student.java
 
 Defines a basic `Student` class with `id` and `name` fields. Demonstrates how Java initializes instance variables to default values (`0` and `null`) when no constructor is called explicitly.

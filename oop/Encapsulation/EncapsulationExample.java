@@ -1,3 +1,4 @@
+package Encapsulation;
 class BankAccount {
     private String accountHolder;
     private double amount;
