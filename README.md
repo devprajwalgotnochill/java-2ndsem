@@ -1,11 +1,11 @@
 # Java OOP Concepts
 
 A collection of Java files demonstrating core object-oriented programming concepts including classes, reference variables, the `this` keyword, and inheritance via `super`.
-
+# 4 brothers of oop 
 ---
-# 1 . Constructors
+# Constructors
 
-# Constructor.java
+# 1.Constructor.java
 
 Introduces the concept of a Java constructor. A constructor shares the class name, has no return type, and is called automatically when an object is created. Used here to initialize `name` and `id` via `this`.
 
@@ -36,7 +36,7 @@ public class Constructor {
 
 ---
 
-# DefaultConstructor.java
+# 2.DefaultConstructor.java
 
 Shows a no-argument (default) constructor. If no constructor is defined Java provides one automatically; here one is defined explicitly to print a message when an object is instantiated.
 
@@ -55,7 +55,7 @@ class Geeks {
 
 ---
 
-# ParameterizedConstructor.java
+# 3.ParameterizedConstructor.java
 
 Demonstrates a parameterized constructor that accepts arguments at the time of object creation to set field values directly, without needing separate setter methods.
 
@@ -78,7 +78,7 @@ class StudentID {
 
 ---
 
-# ConstroctorOverloading.java
+# 4.ConstroctorOverloading.java
 
 Demonstrates constructor overloading where a class defines multiple constructors with different parameter lists. Java selects the correct one based on the arguments passed at object creation.
 
@@ -114,7 +114,7 @@ public class ConstroctorOverloading {
 
 ---
 
-# ConstructorChanging.java
+# 5.ConstructorChanging.java
 
 Shows chained constructor calls using `this()`. The default constructor calls the `int` constructor, which in turn calls the `String, int` constructor, demonstrating a chain of delegation before each constructor finishes its own output.
 
