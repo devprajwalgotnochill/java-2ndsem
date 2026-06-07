@@ -350,6 +350,68 @@ public class Test {
 }
 ```
 
+# Strings
+In Java, a ⁠String is an object that represents a sequence of characters. Unlike standard primitive data types like int or char, strings are defined by the predefined, final java.lang.String class.
+
+# StringBufferAppendDemo.java
+StringBuffer is thread-safe
+
+```java
+StringBuffer sb = new StringBuffer();
+sb.append("Java");
+sb.append("Programming");
+System.out.println("Result: " + sb.toString());
+```
+
+---
+
+# StringBuildingAppendDemo.java
+StringBuilder faster, non-thread-safe 
+
+```java
+StringBuilder sb = new StringBuilder();
+sb.append("Java");
+sb.append("Programming");
+System.out.println("Result: " + sb.toString());
+```
+
+---
+
+# StringImmutabilityDemo.java
+Demonstrates that `String` objects are immutable in Java — `concat()` does not modify the original string unless the result is reassigned.
+
+```java
+String str = "Prajwal";
+str.concat("Gharti");           // no effect, result discarded
+str = str.concat("Gharti");     // works: new object assigned back to str
+System.out.println(str);
+```
+
+---
+
+# VowelConsonantCount.java
+Counts the number of vowels and consonants in a hardcoded string by iterating over each character.
+
+```java
+String str = "Prajwal Gharti";
+for (int i = 0; i < str.length(); i++) {
+    char ch = str.charAt(i);
+    if (ch == 'a' || ch == 'e' || ch == 'i' || ch == 'o' || ch == 'u') vowels++;
+    else consonants++;
+}
+```
+
+---
+
+# VowelConsonantCountWithScanner.java
+Same vowel/consonant counting logic as above, but accepts user input at runtime via `Scanner`.
+
+```java
+Scanner sc = new Scanner(System.in);
+String str = sc.nextLine();
+// ... same counting logic ...
+sc.close();
+```
 
 # Student.java
 
