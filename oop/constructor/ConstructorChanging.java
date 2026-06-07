@@ -1,5 +1,6 @@
+package constructor;
 
-public class ConChanging {
+public class ConstructorChanging {
     public static void main(String[] args) {
         new Student();
     }

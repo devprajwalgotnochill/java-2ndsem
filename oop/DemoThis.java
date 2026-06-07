@@ -8,6 +8,6 @@ class DemoThis {
         System.out.println("Parameterized constructor");
     }
     public static void main(String[] args) {
-        new Demo();
+        new DemoThis();
     }
 }
