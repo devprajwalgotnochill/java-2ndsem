@@ -508,6 +508,63 @@ public class VowelConsonantCountWithScanner {
     }
 }
 ```
+# Array
+An array is a collection of elements of the same data type .
+ 
+```java
+public class Arrays{
+    
+    public static void main(String[] args){
+        
+        // Primitive array
+        int[] arr = {10, 20, 30, 40};
+        int n = arr.length;
+
+        System.out.print("Primitive Array -> ");
+        for (int i = 0; i < n; i++)
+            System.out.print(arr[i] + " ");
+
+        System.out.println();
+
+        // Non-primitive array (String objects)
+        String[] names = {"Lakshit", "Rahul", "Pankaj"};
+
+        System.out.print("Non-Primitive Array -> ");
+        for (int i = 0; i < names.length; i++)
+            System.out.print(names[i] + " ");
+    }
+}
+```
+
+# Array oF Objects
+```java
+class Student {
+    String name;
+    int id;
+
+    Student(String name, int id) {
+        this.name = name;
+        this.id = id;
+    }
+    void display() {
+        System.out.println("Name: " + name + ", ID: " + id);
+    }
+}
+
+public class ArrayofObjects {
+    public static void main(String[] args) {
+        Student[] students = new Student[3];
+        students[0] = new Student("Alice", 101);
+        students[1] = new Student("Bob", 102);
+        students[2] = new Student("Charlie", 103);
+
+        for (int i=0; i<students.length; i++) {
+            students[i].display();
+            System.out.println();
+        }
+    }
+}
+```
 
 # Student.java
 
