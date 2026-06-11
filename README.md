@@ -379,7 +379,10 @@ public class StringBufferAppendDemo {
 
 ```
 
----
+---Output---
+```
+
+```
 
 # StringBuildingAppendDemo.java
 StringBuilder faster, non-thread-safe 
