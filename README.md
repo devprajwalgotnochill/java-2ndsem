@@ -381,7 +381,7 @@ public class StringBufferAppendDemo {
 
 ---Output---
 ```
-
+Result: JavaProgrammingLanguageTutorial
 ```
 
 # StringBuildingAppendDemo.java
@@ -404,7 +404,11 @@ public class StringBuildingAppedDemo {
 
 ```
 
----
+---Output---
+```
+Result: JavaProgrammingLanguageTutorial
+
+```
 
 # StringImmutabilityDemo.java
 Demonstrates that `String` objects are immutable in Java — `concat()` does not modify the original string unless the result is reassigned.
@@ -439,7 +443,19 @@ public record StringImmutabilityDemo() {
 
 ```
 
----
+---Output---
+```
+Org String :Prajwal
+Memory address before :1147258851
+
+After concat() without assignment: 
+String Prajwal
+Memory adress :1147258851
+
+After concat() without assignment: 
+String PrajwalGharti
+Memory adress :891095110
+```
 
 # VowelConsonantCount.java
 Counts the number of vowels and consonants in a hardcoded string by iterating over each character.
@@ -476,7 +492,11 @@ public class VowelConsonantCount {
 }
 ```
 
----
+---Output---
+```
+String: prajwal gharti
+Vowels: 4
+Consonants: 9s```
 
 # VowelConsonantCountWithScanner.java
 
@@ -516,6 +536,12 @@ public class VowelConsonantCountWithScanner {
     }
 }
 ```
+---Output---
+```
+This is a Vehicle
+This Vehicle is Car
+```
+
 # Array
 An array is a collection of elements of the same data type .
  
