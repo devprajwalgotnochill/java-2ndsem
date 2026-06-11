@@ -496,51 +496,10 @@ public class VowelConsonantCount {
 ```
 String: prajwal gharti
 Vowels: 4
-Consonants: 9s```
-
-# VowelConsonantCountWithScanner.java
-
-
-```java
-import java.util.Scanner;
-
-public class VowelConsonantCountWithScanner {
-    public static void main(String[] args) {
-
-        Scanner sc = new Scanner(System.in);
-        System.out.println("Enter a sentence");
-        String str = sc.nextLine();
-
-        int vowels = 0;
-        int consonants = 0;
-        str = str.toLowerCase();
-
-        for (int i = 0; i < str.length(); i++) {
-            char ch = str.charAt(i);
-
-            //check if char is a letter 
-            if ((ch >= 'a' && ch <= 'z')) {
-
-                if (ch == 'a' || ch == 'e' || ch == 'i' || ch == 'o' || ch == 'u') {
-                    vowels++;
-                } else {
-                    consonants++;
-                }
-                
-            }
-        }
-        System.out.println("String: "+str);
-        System.out.println("Vowels: "+ vowels);
-        System.out.println("Consonants: "+ consonants);
-        sc.close();
-    }
-}
+Consonants: 9
 ```
----Output---
-```
-This is a Vehicle
-This Vehicle is Car
-```
+
+
 
 # Array
 An array is a collection of elements of the same data type .
@@ -568,6 +527,12 @@ public class Arrays{
             System.out.print(names[i] + " ");
     }
 }
+```
+
+---Output---
+```
+Primitive Array -> 10 20 30 40 
+Non-Primitive Array -> prajwal arshre rojan sangam 
 ```
 
 # Array oF Objects
@@ -600,6 +565,17 @@ public class ArrayofObjects {
 }
 ```
 
+---Output---
+```
+Name: Alice, ID: 101
+
+Name: Bob, ID: 102
+
+Name: Charlie, ID: 103
+```
+
+
+
 # Student.java
 
 Defines a basic `Student` class with `id` and `name` fields. Demonstrates how Java initializes instance variables to default values (`0` and `null`) when no constructor is called explicitly.
@@ -616,7 +592,10 @@ public class Student {
 }
 ```
 
----
+---Output---
+```
+0 null
+```
 
 # RefVariables.java
 
@@ -638,7 +617,10 @@ public class RefVariables {
 }
 ```
 
----
+---Output---
+```
+2323 Prajwal 
+```
 
 # MethodVariable.java
 
@@ -668,7 +650,10 @@ public class MethodVariable {
 }
 ```
 
----
+---Output---
+```
+12 Prajwal
+```
 
 # DemoThis.java
 
@@ -691,7 +676,11 @@ class DemoThis {
 }
 ```
 
----
+---Output---
+```
+Parameterized constructor
+No-arg constructor
+```
 
 # Super.java
 
@@ -730,8 +719,15 @@ public class Super extends Base {
 }
 ```
 
----
-
+---Output---
+```
+Base class default constructor called
+Derived class default constructor called
+Base class default constructor called
+Name: Prajwal, ID: 123
+Derived class constructor called
+prawal is a good boy
+```
 # TestStudent.java
 
 A minimal test class that creates a `Student` object and prints its default field values, verifying Java's default initialization behavior for `int` and `String`.
@@ -748,4 +744,8 @@ public class TestStudent {
         System.out.println(s1.id + " " + s1.name);
     }
 }
+```
+---Output---
+```
+0 null
 ```

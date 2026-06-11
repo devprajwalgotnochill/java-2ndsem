@@ -11,4 +11,3 @@ class DemoThis {
         new DemoThis();
     }
 }
-s

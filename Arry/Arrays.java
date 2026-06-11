@@ -13,7 +13,7 @@ public class Arrays{
         System.out.println();
 
         // Non-primitive array (String objects)
-        String[] names = {"Lakshit", "Rahul", "Pankaj"};
+        String[] names = {"prajwal", "arshre", "rojan" ,"sangam"};
 
         System.out.print("Non-Primitive Array -> ");
         for (int i = 0; i < names.length; i++)
