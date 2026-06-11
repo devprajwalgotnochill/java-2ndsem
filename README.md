@@ -1,4 +1,5 @@
 # Constructors
+`/oop/constructor`
 
 # 1.Constructor.java
 
@@ -170,6 +171,8 @@ Default
 
 
 # Encapsulation
+`/oop/Encapsulation`
+
 Encapsulation in Java is an object-oriented principle that binds data and methods into a single unit, typically a class. It restricts direct access to data by hiding implementation details. This ensures controlled interaction with the data through defined methods.
 Achieved using access modifiers like private, protected, and public.
 
@@ -501,7 +504,7 @@ Consonants: 9
 
 
 
-# Array
+# Arrays.java
 An array is a collection of elements of the same data type .
  
 ```java
@@ -535,7 +538,7 @@ Primitive Array -> 10 20 30 40
 Non-Primitive Array -> prajwal arshre rojan sangam 
 ```
 
-# Array oF Objects
+# ArrayofObjects.java
 ```java
 class Student {
     String name;
@@ -728,6 +731,7 @@ Name: Prajwal, ID: 123
 Derived class constructor called
 prawal is a good boy
 ```
+
 # TestStudent.java
 
 A minimal test class that creates a `Student` object and prints its default field values, verifying Java's default initialization behavior for `int` and `String`.
