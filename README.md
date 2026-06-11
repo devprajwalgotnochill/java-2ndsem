@@ -10,7 +10,6 @@ A collection of Java files demonstrating core object-oriented programming concep
 Introduces the concept of a Java constructor. A constructor shares the class name, has no return type, and is called automatically when an object is created. Used here to initialize `name` and `id` via `this`.
 
 ```java
-package constructor;
 
 class Example {
     String name;
@@ -41,14 +40,17 @@ public class Constructor {
 Shows a no-argument (default) constructor. If no constructor is defined Java provides one automatically; here one is defined explicitly to print a message when an object is instantiated.
 
 ```java
-class Geeks {
+class DefaultConstructor{
 
-    Geeks() {
-        System.out.println("Default constructor");
+    // Default Constructor
+    DefaultConstructor(){
+        
+        System.out.println("Default constructor"); 
+        
     }
-
-    public static void main(String[] args) {
-        Geeks hello = new Geeks();
+    public static void main(String[] args){
+        
+        DefaultConstructor hello = new DefaultConstructor();
     }
 }
 ```
@@ -83,7 +85,6 @@ class StudentID {
 Demonstrates constructor overloading where a class defines multiple constructors with different parameter lists. Java selects the correct one based on the arguments passed at object creation.
 
 ```java
-package constructor;
 
 class Student {
     String name;
@@ -110,6 +111,13 @@ public class ConstroctorOverloading {
         Student s3 = new Student(123);
     }
 }
+```
+Output 
+```
+Name :Prajwal
+Name :Prajwal
+ID :123
+Id :123
 ```
 
 ---
