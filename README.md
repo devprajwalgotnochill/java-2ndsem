@@ -220,6 +220,9 @@ Balance: 1.21345199E8
 ```
 
 # Inheritance
+
+`oop/inheritance`
+
 Inheritance in Java is a core OOP concept that allows a class to acquire properties and behaviors from another class.
 
 # 1.SingleInheritance.java
@@ -359,6 +362,9 @@ This Vehicle is Bus
 ```
 
 # Strings
+
+`/string`
+
 In Java, a ⁠String is an object that represents a sequence of characters. Unlike standard primitive data types like int or char, strings are defined by the predefined, final java.lang.String class.
 
 # StringBufferAppendDemo.java
@@ -502,11 +508,14 @@ Vowels: 4
 Consonants: 9
 ```
 
+# Array
+
+`Arry`
+
+An array is a collection of elements of the same data type .
 
 
 # Arrays.java
-An array is a collection of elements of the same data type .
- 
 ```java
 public class Arrays{
     
