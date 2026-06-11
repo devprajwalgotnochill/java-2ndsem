@@ -1,3 +1,11 @@
+# Object-Oriented Programming (OOP)
+ is a programming paradigm based on the concept of objects that contain data (fields) and behavior (methods). It focuses on designing software that closely represents real-world entities. It is used to:
+
+* Improves code reusability
+* Enhances maintainability and scalability
+* Makes programs easier to understand and manage
+* Closely models real-world entities
+
 # Constructors
 `/oop/constructor`
 
@@ -585,6 +593,7 @@ Name: Bob, ID: 102
 
 Name: Charlie, ID: 103
 ```
+
 
 
 
