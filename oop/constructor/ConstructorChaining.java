@@ -1,6 +1,6 @@
 package constructor;
 
-public class ConstructorChanging {
+public class ConstructorChaining {
     public static void main(String[] args) {
         new Student();
     }
