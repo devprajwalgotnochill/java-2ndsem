@@ -4,16 +4,16 @@ It’s used to assign default values to an object.
 If no constructor is explicitly defined,
 Java provides a default constructor. */ 
 
-class Geeks{
+class DefaultConstructor{
 
     // Default Constructor
-    Geeks(){
+    DefaultConstructor(){
         
         System.out.println("Default constructor"); 
         
     }
     public static void main(String[] args){
         
-        Geeks hello = new Geeks();
+        DefaultConstructor hello = new DefaultConstructor();
     }
 }
