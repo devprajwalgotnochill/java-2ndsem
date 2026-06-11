@@ -1,7 +1,7 @@
 # Java OOP Concepts
 
 A collection of Java files demonstrating core object-oriented programming concepts including classes, reference variables, the `this` keyword, and inheritance via `super`.
-# 4 brothers of oop 
+# oop 
 ---
 # Constructors
 
@@ -158,54 +158,6 @@ class Student {
 
 ---
 
-
-
-
-# Abstraction 
-Abstraction in Java is the process of hiding internal implementation details and showing only essential functionality to the user. It focuses on what an object does rather than how it does it.
-
-It hides the complex details and shows only essential features.
-Abstract classes may have methods without implementation and must be implemented by subclasses.
-
-```java
-package abstraction;
-// Abstract class
-abstract class Animal {
-
-    // Abstract method (no body)
-    abstract void makeSound();
-
-    // Normal method
-    void sleep() {
-        System.out.println("Animal is sleeping");
-    }
-}
-
-// Concrete class
-class Dog extends Animal {
-
-    @Override
-    void makeSound() {
-        System.out.println("Dog says Woof!");
-    }
-}
-
-class Cat extends Animal {
-    void makeSound() {
-        System.out.println("Meow!");
-    }
-}
-
-public class Abstraction {
-    public static void main(String[] args) {
-
-        Animal a = new Dog(); // Upcasting
-
-        a.makeSound(); // Calls Dog's implementation
-        a.sleep();     // Calls Animal's method
-    }
-}
-```
 
 # Encapsulation
 Encapsulation in Java is an object-oriented principle that binds data and methods into a single unit, typically a class. It restricts direct access to data by hiding implementation details. This ensures controlled interaction with the data through defined methods.
