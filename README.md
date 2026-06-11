@@ -116,7 +116,7 @@ public class ConstroctorOverloading {
     }
 }
 ```
-Output 
+---Output--- 
 ```
 Name :Prajwal
 Name :Prajwal
@@ -131,7 +131,6 @@ Id :123
 Shows chained constructor calls using `this()`. The default constructor calls the `int` constructor, which in turn calls the `String, int` constructor, demonstrating a chain of delegation before each constructor finishes its own output.
 
 ```java
-package constructor;
 
 public class ConstructorChaining {
     public static void main(String[] args) {
@@ -173,8 +172,10 @@ Default
 # Encapsulation
 Encapsulation in Java is an object-oriented principle that binds data and methods into a single unit, typically a class. It restricts direct access to data by hiding implementation details. This ensures controlled interaction with the data through defined methods.
 Achieved using access modifiers like private, protected, and public.
+
+# EncapsulationExample.java
+
 ```java
-package Encapsulation;
 class BankAccount {
     private String accountHolder;
     private double amount;
@@ -200,8 +201,8 @@ public class EncapsulationExample {
     public static void main(String[] args) {
         BankAccount ba = new BankAccount();
 
-        ba.setAccountHolder("Santosh");
-        ba.setAmount(123);
+        ba.setAccountHolder("Its me prajwal ");
+        ba.setAmount(1213451359999);
 
         System.out.println("Account Holder Name: " +ba.getAccountHolder());
 
@@ -209,11 +210,17 @@ public class EncapsulationExample {
     }
 }
 ```
+---Output---
+```
+Account Holder Name: Its me prajwal 
+Balance: 1.21345199E8
+```
 
 # Inheritance
 Inheritance in Java is a core OOP concept that allows a class to acquire properties and behaviors from another class.
 
-# 1.Single Inheritance
+# 1.SingleInheritance.java
+
 ```java
 //Super class
 class Vehicle {
@@ -236,8 +243,13 @@ public class SingleInheritance {
     }
 }
 ```
+---Output---
+```
+This is a Vehicle
+This Vehicle is Car
+```
 
-# 2.Multilevel Inheritance
+# 2.MultilevelInheritance.java
 ```java
 class Vehicle {
     Vehicle() {
@@ -254,16 +266,22 @@ class Car extends FourWheeler {
         System.out.println("This 4 Wheeler Vehicle is a Car");
     }
 }
-public class Geeks {
+public class MultilevelInheritance {
     public static void main(String[] args) {
         Car obj = new Car(); // Triggers all constructors in order
     }
 }
 ```
+---Output---
+```
+This is a Vehicle
+4 Wheeler Vehicles
+This 4 Wheeler Vehicle is a Car
+```
 
 
 
-# 3.Multiple Inheritance
+# 3.MultipleInheritance.java 
 In Multiple inheritances, one class can have more than one superclass and inherit features from all parent classes.
 Note: that Java does not support multiple inheritances with classes. In Java, we can achieve multiple inheritances only through Interfaces. 
 ```java
@@ -283,7 +301,7 @@ class AmphibiousVehicle implements LandVehicle, WaterVehicle {
         System.out.println("This is an AmphibiousVehicle");
     }
 }
-public class Test {
+public class MultipleInheritance {
     public static void main(String[] args) {
         AmphibiousVehicle obj = new AmphibiousVehicle();
         obj.waterInfo();
@@ -291,8 +309,16 @@ public class Test {
     }
 }
 ```
+---Output---
+```
+This is a Vehicle
+This is a Car
+This is a Vehicle
+This is a Bus
+Fare information
+```
 
-# 4.Hierarchical Inheritance
+# 4.HierarchicalInheritance.java
 hierarchical inheritance, more than one subclass is inherited from a single base class.
 ```java
 class Vehicle {
@@ -313,12 +339,20 @@ class Bus extends Vehicle {
     }
 }
 
-public class Test {
+public class HierarchicalInheritance {
     public static void main(String[] args) {
         Car obj1 = new Car(); 
         Bus obj2 = new Bus(); 
     }
 }
+```
+
+---Output---
+```
+This is a Vehicle
+This Vehicle is Car
+This is a Vehicle
+This Vehicle is Bus
 ```
 
 # Strings

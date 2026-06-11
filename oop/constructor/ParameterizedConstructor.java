@@ -1,4 +1,4 @@
-package constructor;
+
 public class ParameterizedConstructor { 
     public static void main(String[] args) {
         StudentID s1  = new StudentID("Prajwal", 12);

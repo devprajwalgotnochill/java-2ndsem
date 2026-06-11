@@ -1,4 +1,3 @@
-package Encapsulation;
 class BankAccount {
     private String accountHolder;
     private double amount;
@@ -24,8 +23,8 @@ public class EncapsulationExample {
     public static void main(String[] args) {
         BankAccount ba = new BankAccount();
 
-        ba.setAccountHolder("Santosh");
-        ba.setAmount(123);
+        ba.setAccountHolder("Its me prajwal ");
+        ba.setAmount(121345199);
 
         System.out.println("Account Holder Name: " +ba.getAccountHolder());
 
