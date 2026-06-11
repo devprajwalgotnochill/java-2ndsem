@@ -1,8 +1,3 @@
-# Java OOP Concepts
-
-A collection of Java files demonstrating core object-oriented programming concepts including classes, reference variables, the `this` keyword, and inheritance via `super`.
-# oop 
----
 # Constructors
 
 # 1.Constructor.java
@@ -33,7 +28,10 @@ public class Constructor {
 }
 ```
 
----
+---Output---
+```
+Name Prajwal ID: 12
+```
 
 # 2.DefaultConstructor.java
 
@@ -55,14 +53,16 @@ class DefaultConstructor{
 }
 ```
 
----
+---Output---
+```
+Default constructor
+```
 
 # 3.ParameterizedConstructor.java
 
 Demonstrates a parameterized constructor that accepts arguments at the time of object creation to set field values directly, without needing separate setter methods.
 
 ```java
-package constructor;
 
 public class ParameterizedConstructor {
     public static void main(String[] args) {
@@ -78,7 +78,11 @@ class StudentID {
 }
 ```
 
----
+---Output---
+```
+Name :Prajwal
+Name :12
+```
 
 # 4.ConstroctorOverloading.java
 
@@ -122,41 +126,48 @@ Id :123
 
 ---
 
-# 5.ConstructorChanging.java
+# 5.ConstructorChaining.java
 
 Shows chained constructor calls using `this()`. The default constructor calls the `int` constructor, which in turn calls the `String, int` constructor, demonstrating a chain of delegation before each constructor finishes its own output.
 
 ```java
 package constructor;
 
-public class ConstructorChanging {
+public class ConstructorChaining {
     public static void main(String[] args) {
         new Student();
     }
 }
-
+ 
 class Student {
     String name;
     int id;
 
-    Student() {
+    Student(){
         this(123);
         System.out.println("Default");
     }
 
-    Student(String name, int id) {
-        System.out.println("Name: " + name);
-        System.out.println("ID: " + id);
+    Student(String name,int id){
+        System.out.println("Name :" + name);
+        System.out.println("ID :" + id);
+
     }
 
-    Student(int id) {
-        this("Prajwal", 123);
-        System.out.println("Id");
+    Student(int id){
+        this("Prajwal" ,123);
+        System.out.println("Id ");
     }
 }
-```
 
----
+```
+---Output---
+```
+Name :Prajwal
+ID :123
+Id 
+Default
+```
 
 
 # Encapsulation
