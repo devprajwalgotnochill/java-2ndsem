@@ -236,31 +236,54 @@ Inheritance in Java is a core OOP concept that allows a class to acquire propert
 # 1.SingleInheritance.java
 
 ```java
-//Super class
-class Vehicle {
-    Vehicle() {
-        System.out.println("This is a Vehicle");
+class Person{
+    String name;
+    int age;
+
+    // constructor
+    Person(String name ,int age){
+        this.name = name;
+        this.age =age;
+    }
+
+    void displayPerson(){
+        System.out.println("Name: "+name);
+        System.out.println("Age: "+age);
     }
 }
-
-// Subclass 
-class Car extends Vehicle {
-    Car() {
-        System.out.println("This Vehicle is Car");
+// child class
+class Student extends Person{
+    int rollNo;
+    // constructor
+    Student(String name,int age ,int rollNo){
+        super(name , age);//calling parent class
+        this.rollNo = rollNo;
     }
+    // Method to display 
+    void displayStudent(){
+        displayPerson();
+        System.out.println("Roll No : "+ rollNo);
+    }
+
 }
 
 public class SingleInheritance {
     public static void main(String[] args) {
-        // Creating object of subclass invokes base class constructor
-        Car obj = new Car();
+        Student s1 = new Student("prajwal", 19, 13);
+
+        System.out.println("Student details: ");
+        s1.displayStudent();
+
     }
 }
 ```
+
 ---Output---
 ```
-This is a Vehicle
-This Vehicle is Car
+Student details: 
+Name: prajwal
+Age: 19
+Roll No : 13
 ```
 
 # 2.MultilevelInheritance.java
