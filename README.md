@@ -288,32 +288,41 @@ Roll No : 13
 
 # 2.MultilevelInheritance.java
 ```java
-class Vehicle {
-    Vehicle() {
-        System.out.println("This is a Vehicle");
+class Animal{
+    void eat(){
+        System.out.println("Animal is eating.");
     }
 }
-class FourWheeler extends Vehicle {
-    FourWheeler() {
-        System.out.println("4 Wheeler Vehicles");
+// child class
+class dog extends Animal{
+    void bark(){
+        System.out.println("Dog is barking.");
     }
 }
-class Car extends FourWheeler {
-    Car() {
-        System.out.println("This 4 Wheeler Vehicle is a Car");
+
+// grand child class
+
+class Puppy extends dog{
+    void weep(){
+        System.out.println("Puppy is weeping.");
     }
 }
-public class MultilevelInheritance {
+
+// mainclass
+public class MultilevelInheritance{
     public static void main(String[] args) {
-        Car obj = new Car(); // Triggers all constructors in order
+        Puppy p = new Puppy();
+        p.eat();
+        p.bark();
+        p.weep();
     }
 }
 ```
 ---Output---
 ```
-This is a Vehicle
-4 Wheeler Vehicles
-This 4 Wheeler Vehicle is a Car
+Animal is eating.
+Dog is barking.
+Puppy is weeping.
 ```
 
 
