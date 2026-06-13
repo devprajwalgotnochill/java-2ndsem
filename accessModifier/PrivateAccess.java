@@ -3,18 +3,18 @@ class Person {
     // private variable
     private String name;
 
-    public void setName(String name)  {
-
+    public void setName(String name) {
         this.name = name; // accessible within class
     }
 
-    public String getName() { return name; }
+    public String getName() {
+        return name;
+    }
 }
 
 public class PrivateAccess {
-    public static void main(String[] args)
-    {
 
+    public static void main(String[] args) {
         Person p = new Person();
         p.setName("Prajwal");
 

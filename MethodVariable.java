@@ -1,15 +1,14 @@
+class Student {
 
-class Student{
-
-    int id ;
+    int id;
     String name;
 
-    void insertData(int id ,String name){
+    void insertData(int id, String name) {
         this.id = id;
         this.name = name;
     }
 
-    void Display(){
+    void Display() {
         System.out.println(id + " " + name);
     }
 }
@@ -17,11 +16,9 @@ class Student{
 public class MethodVariable {
 
     public static void main(String[] args) {
-
-        // init of variable through refrence 
+        // init of variable through refrence
         Student s1 = new Student();
-        s1.insertData(12,"Prajwal");
+        s1.insertData(12, "Prajwal");
         s1.Display();
-         
     }
 }

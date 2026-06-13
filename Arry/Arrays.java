@@ -1,7 +1,7 @@
 public class Arrays{
-    
+
     public static void main(String[] args){
-        
+
         // Primitive array
         int[] arr = {10, 20, 30, 40};
         int n = arr.length;
