@@ -1,4 +1,5 @@
 generics in java
+\n
 interface and abstraction in java
 modern interface 
 class and interface in generics
