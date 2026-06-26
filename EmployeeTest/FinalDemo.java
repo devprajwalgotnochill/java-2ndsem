@@ -1,3 +1,5 @@
+import sun.jvm.hotspot.oops.SpeculativeTrapData;
+
 final class Utility {
 
     public static int square(int x) {
@@ -30,7 +32,26 @@ class SBI extends Bank {
 }
 
 public class FinaDemo {
+
     public static void main(String[] args) {
-	
+        final double PI = 3.14159;
+        double radius = 7;
+        double area = PI * radius * radius;
+
+        System.out.println("Radius = " + radius);
+        System.out.println("Area of Crrcle = " + area);
+
+        SBI sbi = new SBI();
+
+        double amount = 10000;
+        double interest = sbi.calInt(amount);
+
+        System.out.println("\nAmount = " + amount);
+        System.out.println("\nInterest = " + interest);
+
+        int num = 5;
+
+        System.out.println("\nSquare of " + num + " = " + Utility.square(num));
+        System.out.println("\nSquare of " + num + " = " + Utility.cube(num));
     }
 }
