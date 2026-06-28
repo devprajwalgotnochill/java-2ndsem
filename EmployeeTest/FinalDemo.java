@@ -1,5 +1,3 @@
-import sun.jvm.hotspot.oops.SpeculativeTrapData;
-
 final class Utility {
 
     public static int square(int x) {
@@ -13,7 +11,7 @@ final class Utility {
 
 // parent class
 
-class bank {
+class Bank {
 
     // final method
     public final double calInt(double amount) {
@@ -31,7 +29,7 @@ class SBI extends Bank {
     */
 }
 
-public class FinaDemo {
+public class FinalDemo {
 
     public static void main(String[] args) {
         final double PI = 3.14159;
