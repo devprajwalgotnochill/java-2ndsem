@@ -1,14 +1,16 @@
-/**
- * Main
- */
-public class Main {
+class Main {
 
     public static void main(String[] args) {
-        // default constructor
-        Book b = new Book();
+        // create the library with a size of 5
+        // array of object
+        Library library = new Library(5);
 
-        // paramater constructor
-        // L at the end of ISBN numbers — that tells Java it's a long literal
+        // default params
+        Book b = new Book();
+        // create Book objects using parameterized constructor
+        //
+
+        //paramaters constructor
         Book b1 = new Book(
             "Harry Potter",
             "Bloomsbury",
@@ -18,30 +20,41 @@ public class Main {
             1997,
             9780747532699L
         );
-        Book b2 = new Book(
-            "Clean Code",
-            "Prentice Hall",
-            "Robert C. Martin",
-            4.5,
-            431,
-            2008,
-            9780132350884L
-        );
-        Book b3 = new Book(
-            "The Alchemist",
-            "HarperCollins",
-            "Paulo Coelho",
-            4.6,
-            208,
-            1988,
-            9780062315007L
+
+        //
+        // create ReferenceBook objects
+        ReferenceBook r1 = new ReferenceBook(
+            "Intro to Algorithms",
+            "MIT Press",
+            "Thomas Cormen",
+            4.7,
+            1292,
+            2009,
+            9780262033848L,
+            "Computer Science"
         );
 
-        b.display();
-        b1.display();
-        b2.display();
-        b3.display();
+        // add all books to the library
+        library.addBook(b);
+        library.addBook(b1);
+        library.addBook(r1);
 
-        // we need to provide all the paramater
+        // display all books
+        library.displayAll();
+
+        // directly borrows books from the Book class
+        // b1.borrow(); // Harry Potter has been borrowed.
+        // b1.borrow(); // Harry Potter is already borrowed.
+        // b1.returnBook();
+        //
+
+        // ask library -> class Book
+        library.borrowBook(1); // borrows Harry Potter
+        library.borrowBook(1); // already borrowed
+        library.returnBook(1);
+
+        library.borrowBook(2);
+
+        // library.borrowBook(12);
     }
 }

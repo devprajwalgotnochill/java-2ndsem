@@ -1,4 +1,4 @@
-class Book implements Displayable {
+class Book implements Borrowable {
 
     private String title;
     private String publisher;
@@ -119,6 +119,22 @@ class Book implements Displayable {
         System.out.println("ISBN        : " + isbn);
     }
 
-   
     //
+    //
+    private boolean isBorrowed = false;
+
+    // the interface just check if the class have the methods
+    public void borrow() {
+        if (!isBorrowed) {
+            isBorrowed = true;
+            System.out.println(getTitle() + " has been borrowed.");
+        } else {
+            System.out.println(getTitle() + " is already borrowed.");
+        }
+    }
+
+    public void returnBook() {
+        isBorrowed = false;
+        System.out.println(getTitle() + " has been returned.");
+    }
 }
