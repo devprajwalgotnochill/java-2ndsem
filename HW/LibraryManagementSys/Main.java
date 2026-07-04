@@ -3,7 +3,7 @@ class Main {
     public static void main(String[] args) {
         // create the library with a size of 5
         // array of object
-        Library library = new Library(5);
+        Library library = new Library(10);
 
         // default params
         Book b = new Book();
@@ -34,10 +34,55 @@ class Main {
             "Computer Science"
         );
 
+        ReferenceBook r2 = new ReferenceBook(
+            "Intro to Algorithms",
+            "MIT Press",
+            "Thomas Cormen",
+            4.7,
+            1292,
+            2009,
+            9780262033848L,
+            "Computer Science"
+        );
+        ReferenceBook r3 = new ReferenceBook(
+            "Intro to Algorithms",
+            "MIT Press",
+            "Thomas Cormen",
+            4.7,
+            1292,
+            2009,
+            9780262033848L,
+            "Computer Science"
+        );
+        ReferenceBook r4 = new ReferenceBook(
+            "Intro to Algorithms",
+            "MIT Press",
+            "Thomas Cormen",
+            4.7,
+            1292,
+            2009,
+            9780262033848L,
+            "Computer Science"
+        );
+        ReferenceBook r5 = new ReferenceBook(
+            "Intro to Algorithms",
+            "MIT Press",
+            "Thomas Cormen",
+            4.7,
+            1292,
+            2009,
+            9780262033848L,
+            "Computer Science"
+        );
+
         // add all books to the library
         library.addBook(b);
         library.addBook(b1);
         library.addBook(r1);
+        library.addBook(r2);
+        library.addBook(r3);
+        library.addBook(r4);
+        library.addBook(r5j);
 
         // display all books
         library.displayAll();
