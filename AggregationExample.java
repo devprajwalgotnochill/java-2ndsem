@@ -21,7 +21,7 @@ class Department {
         this.employee = employee;
     }
 
-    void displayDepartment() {
+    void displayDepartment() { 
         System.out.println("Department: " + departmentName);
         employee.displayEmployee();
     }
