@@ -1,3 +1,12 @@
+/*
+Practical 1: Classes, Objects & Constructors  (10 Marks) Create a Java program that:
+•	Defines a class Student with private attributes: name, lcid, year, and gpa.
+•	Implements parameterized and default constructors.
+•	Includes getter/setter methods and a displayInfo() method.
+•	Creates an array of at least 5 Student objects and displays all records. Include the full source code and a screenshot of the program output.
+
+*/
+
 class Student {
 
     private String name;
