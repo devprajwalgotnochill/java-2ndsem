@@ -79,5 +79,3 @@ cd assignment/q1
 javac StudentDemo.java
 java StudentDemo
 ```
-
-Repeat the same steps inside `q2`, `q3`, `q4`, and `q5`, replacing the file/class name accordingly. Screenshots of the compilation and execution output should be taken from your terminal/IDE and added to the assignment document's Appendix section.
